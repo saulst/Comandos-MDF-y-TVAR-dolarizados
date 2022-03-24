@@ -100,6 +100,7 @@ variables<-cbind(ted, wti, credito_deposito_d1, riesgo_pais, roa_d1,
                  roe_d1, ina, tasa_pasiva_d1, tasa_activa_d1, mora_d1, ecuindex_d1,liquidez_d1)
 
 write.xlsx(variables, "variables_ecuador_indice.xlsx")
+
 fa.parallel(cor(base_ecu), n.obs=length(variables), fm="gls", main="Ecuador")
 
 #####acp######

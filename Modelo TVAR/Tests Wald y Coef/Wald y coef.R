@@ -40,15 +40,6 @@ walds2 <- function(pais0,variable){
     select(vector_variables)  %>%  # Me quedo solo las variables del mdoelo
     select(-pais)
   
-  # El test de linearidad nos dio los siguiotes parametros:
-  
-  # 
-  # lag = 1 Lag para las variables para las variables explicativas
-  # thDelay = 1 Lag para la variable de umbral
-  # mTh = tres regimenes: "gdp_growth","liquid_assets_to_short_term_liabilities","inflation_regime_ipc"
-  # trick = "mapply" Es un metodo computacional para acelerar la estimación
-  
-  # 1. Modelo, regimen: gdp -------------------------------------------------
   
   datos_pais %>% names
   
@@ -92,7 +83,7 @@ walds2 <- function(pais0,variable){
     map("result") %>% 
     discard(~is.null(.x))
   
-  
+ 
   # aa <- var[[1]]
   
   # bb<- summary(aa)
